@@ -66,6 +66,7 @@
           <h5 class="white-text">Car Sharing</h5>
           <p class="grey-text text-lighten-4"></p>
         </div>
+	<h1> <% var h= JSON.parse(data[0]); %> <%= h.username%> </h1>
         <table>
         <thead>
           <th>Start Lon</th>
@@ -76,16 +77,17 @@
           <th>End time</th>
         </thead>
         <tbody>
-        <% data.forEach(function(trip) { %>
+        <% for( var i = 0; i < data.length; i++) { %>
           <tr>
-          <td><%= trip.slon %></td>
-          <td><%= trip.sla %></td>
-          <td><%= trip.elon %></td>
-          <td><%= trip.eat %></td>
-          <td><%= trip.stime %></td>
-          <td><%= trip.etime %></td>
+	  <% var obj = JSON.parse(data[i]); %>
+          <td><%= obj.slo %></td>
+          <td><%= obj.sla %></td>
+          <td><%= obj.elo %></td>
+          <td><%= obj.ela %></td>
+          <td><%= obj.stime %></td>
+          <td><%= obj.etime %></td>
           </tr>
-        <% }); %>
+        <% } %>
         </tbody>
         </table>
       </div>
