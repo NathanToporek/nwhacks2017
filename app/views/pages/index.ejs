@@ -54,15 +54,17 @@
                 var self = this;
                 mojio_client.getPath('/v2/trips').then(function(result){
                     self.trips = result.Data;
-                    var startLocation = {lat: self.trips[0].StartLocation.Lat, lng: self.trips[0].StartLocation.Lng};
-                    var endLocation = {lat: self.trips[0].EndLocation.Lat, lng: self.trips[0].EndLocation.Lng};
+                    var length = result.Data.length - 2;
+                    var startLocation = {lat: self.trips[length].StartLocation.Lat, lng: self.trips[length].StartLocation.Lng};
+                    var endLocation = {lat: self.trips[length].EndLocation.Lat, lng: self.trips[length].EndLocation.Lng};
                     var map = new google.maps.Map(document.getElementById('google-map'), {
                         zoom: 12,
                         center: startLocation
                     });
                     var markerStart = new google.maps.Marker({
                         position: startLocation,
-                        map: map
+                        map: map,
+                        icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png'
                     });
                     var markerEnd = new google.maps.Marker({
                         position: endLocation,
@@ -99,15 +101,6 @@
     <div class="container-fluid">
         <div>
         <div id="google-map"></div>
-            <table>
-                <thead>
-                    <th>Lat</th>
-                    <th>Lng</th>
-                </thead>
-                <tbody id="data-trips">
-
-                </tbody>
-            </table>
         </div>
     </div>
 
@@ -118,7 +111,7 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Car Sharing</h5>
+          <h5 class="white-text">Latest Trip</h5>
           <p class="grey-text text-lighten-4"></p>
         </div>
       </div>
