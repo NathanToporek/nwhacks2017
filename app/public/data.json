@@ -1,0 +1,435 @@
+{
+  "Data": [
+    {
+      "VehicleId": "70eb28a1-43e2-4bd4-9b19-c8efe9e05712",
+      "Tags": [],
+      "MojioId": "11eba20b-9390-4dc1-9809-13a7e610b919",
+      "Completed": true,
+      "Duration": "00:01:13.2580000",
+      "StartTimestamp": "2017-03-19T02:22:48.120Z",
+      "EndTimestamp": "2017-03-19T02:24:01.378Z",
+      "StartOdometer": {
+        "RolloverValue": 0,
+        "BaseUnit": "Meters",
+        "Timestamp": "2017-03-19T02:22:48.120Z",
+        "BaseValue": 78,
+        "Unit": "Meters",
+        "Value": 78
+      },
+      "EndOdometer": {
+        "RolloverValue": 0,
+        "BaseUnit": "Meters",
+        "Timestamp": "2017-03-19T02:24:01.378Z",
+        "BaseValue": 16429,
+        "Unit": "Meters",
+        "Value": 16429
+      },
+      "StartLocation": {
+        "Lat": 49.24312,
+        "Lng": -123.09693,
+        "Timestamp": "2017-03-19T02:22:48.120Z",
+        "Address": {
+          "City": "Vancouver",
+          "Country": "Canada",
+          "CountryCode": "CA",
+          "County": "Greater Vancouver",
+          "FormattedAddress": "4101 Prince Edward St, Vancouver, BC V5V 3Y9, Canada",
+          "HouseNumber": "4101",
+          "Neighbourhood": "East Side",
+          "PostCode": "V5V 3Y9",
+          "Road": "Prince Edward Street",
+          "State": "British Columbia",
+          "Suburb": "East Side"
+        },
+        "Status": "Locked",
+        "Dilution": 0,
+        "Altitude": 0,
+        "GeoHash": "c2b2nu7tcwuk"
+      },
+      "EndLocation": {
+        "Lat": 49.22495,
+        "Lng": -123.22436,
+        "Timestamp": "2017-03-19T02:24:01.378Z",
+        "Address": {
+          "City": "Richmond",
+          "Country": "Canada",
+          "CountryCode": "CA",
+          "County": "Greater Vancouver",
+          "FormattedAddress": "28 Ferguson Rd, Richmond, BC V7B 0A8, Canada",
+          "HouseNumber": "28",
+          "PostCode": "V7B 0A8",
+          "Road": "Ferguson Road",
+          "State": "British Columbia"
+        },
+        "Status": "Locked",
+        "Dilution": 0,
+        "Altitude": 0,
+        "GeoHash": "c2b25cnu07c8"
+      },
+      "Distance": {
+        "BaseUnit": "Meters",
+        "Timestamp": "2017-03-19T02:24:01.378Z",
+        "BaseValue": 16351,
+        "Unit": "Meters",
+        "Value": 16351
+      },
+      "MaxSpeed": {
+        "BaseUnit": "KilometersPerHour",
+        "Timestamp": "2017-03-19T02:23:05.181Z",
+        "BaseValue": 89,
+        "Unit": "KilometersPerHour",
+        "Value": 89
+      },
+      "MaxRPM": {
+        "BaseUnit": "RevolutionsPerMinute",
+        "Timestamp": "2017-03-19T02:23:10.221Z",
+        "BaseValue": 1198,
+        "Unit": "RevolutionsPerMinute",
+        "Value": 1198
+      },
+      "MaxAcceleration": {
+        "BaseUnit": "KilometersPerHourPerSecond",
+        "Timestamp": "2017-03-19T02:22:48.120Z",
+        "BaseValue": 0,
+        "Unit": "KilometersPerHourPerSecond",
+        "Value": 0
+      },
+      "MaxDeceleration": {
+        "BaseUnit": "KilometersPerHourPerSecond",
+        "Timestamp": "2017-03-19T02:22:48.120Z",
+        "BaseValue": 0,
+        "Unit": "KilometersPerHourPerSecond",
+        "Value": 0
+      },
+      "FuelEfficiency": {
+        "BaseUnit": "KilometerPerLiter",
+        "Timestamp": "2017-03-19T02:22:48.120Z",
+        "BaseValue": 16,
+        "Unit": "KilometerPerLiter",
+        "Value": 16
+      },
+      "StartFuelLevel": {
+        "BaseUnit": "Percentage",
+        "RiskSeverity": "None",
+        "Timestamp": "2017-03-19T02:22:48.120Z",
+        "BaseValue": 79.9,
+        "Unit": "Percentage",
+        "Value": 79.9
+      },
+      "EndFuelLevel": {
+        "BaseUnit": "Percentage",
+        "RiskSeverity": "None",
+        "Timestamp": "2017-03-19T02:24:01.378Z",
+        "BaseValue": 70,
+        "Unit": "Percentage",
+        "Value": 70
+      },
+      "Id": "8e3b77c7-0f37-4b2e-8efd-d4c3eaefc4d5",
+      "CreatedOn": "2017-03-19T02:22:48.094Z",
+      "LastModified": "2017-03-19T02:24:01.378Z",
+      "Deleted": false,
+      "Metadata": {
+        "UserPermissions": [
+          "owner"
+        ],
+        "RequestPermissions": [
+          "admin"
+        ]
+      },
+      "Links": {
+        "Self": "/v2/trips/8e3b77c7-0f37-4b2e-8efd-d4c3eaefc4d5",
+        "Vehicle": "/v2/vehicles/70eb28a1-43e2-4bd4-9b19-c8efe9e05712",
+        "Mojio": "/v2/mojios/11eba20b-9390-4dc1-9809-13a7e610b919",
+        "Permissions": "/v2/trips/8e3b77c7-0f37-4b2e-8efd-d4c3eaefc4d5/permissions",
+        "Permission": "/v2/trips/8e3b77c7-0f37-4b2e-8efd-d4c3eaefc4d5/permission",
+        "States": "/v2/trips/8e3b77c7-0f37-4b2e-8efd-d4c3eaefc4d5/history/states",
+        "Locations": "/v2/trips/8e3b77c7-0f37-4b2e-8efd-d4c3eaefc4d5/history/locations"
+      }
+    },
+    {
+      "VehicleId": "70eb28a1-43e2-4bd4-9b19-c8efe9e05712",
+      "Tags": [],
+      "MojioId": "11eba20b-9390-4dc1-9809-13a7e610b919",
+      "Completed": true,
+      "Duration": "00:01:07.6950000",
+      "StartTimestamp": "2017-03-19T05:21:35.533Z",
+      "EndTimestamp": "2017-03-19T05:22:43.228Z",
+      "StartOdometer": {
+        "RolloverValue": 0,
+        "BaseUnit": "Meters",
+        "Timestamp": "2017-03-19T05:21:35.533Z",
+        "BaseValue": 113,
+        "Unit": "Meters",
+        "Value": 113
+      },
+      "EndOdometer": {
+        "RolloverValue": 0,
+        "BaseUnit": "Meters",
+        "Timestamp": "2017-03-19T05:22:43.228Z",
+        "BaseValue": 10546,
+        "Unit": "Meters",
+        "Value": 10546
+      },
+      "StartLocation": {
+        "Lat": 49.25672,
+        "Lng": -123.13882,
+        "Timestamp": "2017-03-19T05:21:35.533Z",
+        "Address": {
+          "City": "Vancouver",
+          "Country": "Canada",
+          "CountryCode": "CA",
+          "County": "Greater Vancouver",
+          "FormattedAddress": "3317-3333 Granville St, Vancouver, BC V6H 3K3, Canada",
+          "HouseNumber": "3317-3333",
+          "Neighbourhood": "Shaughnessy",
+          "PostCode": "V6H 3K3",
+          "Road": "Granville Street",
+          "State": "British Columbia",
+          "Suburb": "Shaughnessy"
+        },
+        "Status": "Locked",
+        "Dilution": 0,
+        "Altitude": 0,
+        "GeoHash": "c2b2jyvj1w0g"
+      },
+      "EndLocation": {
+        "Lat": 49.25554,
+        "Lng": -123.24227,
+        "Timestamp": "2017-03-19T05:22:43.228Z",
+        "Address": {
+          "City": "Vancouver",
+          "Country": "Canada",
+          "CountryCode": "CA",
+          "County": "Greater Vancouver",
+          "FormattedAddress": "3050 E Mall, Vancouver, BC V6T 1W5, Canada",
+          "HouseNumber": "3050",
+          "PostCode": "V6T 1W5",
+          "Road": "East Mall",
+          "State": "British Columbia"
+        },
+        "Status": "Locked",
+        "Dilution": 0,
+        "Altitude": 0,
+        "GeoHash": "c2b25w9wqfnu"
+      },
+      "Distance": {
+        "BaseUnit": "Meters",
+        "Timestamp": "2017-03-19T05:22:43.228Z",
+        "BaseValue": 10433,
+        "Unit": "Meters",
+        "Value": 10433
+      },
+      "MaxSpeed": {
+        "BaseUnit": "KilometersPerHour",
+        "Timestamp": "2017-03-19T05:22:17.266Z",
+        "BaseValue": 88,
+        "Unit": "KilometersPerHour",
+        "Value": 88
+      },
+      "MaxRPM": {
+        "BaseUnit": "RevolutionsPerMinute",
+        "Timestamp": "2017-03-19T05:22:09.215Z",
+        "BaseValue": 1192,
+        "Unit": "RevolutionsPerMinute",
+        "Value": 1192
+      },
+      "MaxAcceleration": {
+        "BaseUnit": "KilometersPerHourPerSecond",
+        "Timestamp": "2017-03-19T05:21:35.533Z",
+        "BaseValue": 0,
+        "Unit": "KilometersPerHourPerSecond",
+        "Value": 0
+      },
+      "MaxDeceleration": {
+        "BaseUnit": "KilometersPerHourPerSecond",
+        "Timestamp": "2017-03-19T05:21:35.533Z",
+        "BaseValue": 0,
+        "Unit": "KilometersPerHourPerSecond",
+        "Value": 0
+      },
+      "FuelEfficiency": {
+        "BaseUnit": "KilometerPerLiter",
+        "Timestamp": "2017-03-19T05:21:35.533Z",
+        "BaseValue": 15,
+        "Unit": "KilometerPerLiter",
+        "Value": 15
+      },
+      "StartFuelLevel": {
+        "BaseUnit": "Percentage",
+        "RiskSeverity": "None",
+        "Timestamp": "2017-03-19T05:21:35.533Z",
+        "BaseValue": 79.9,
+        "Unit": "Percentage",
+        "Value": 79.9
+      },
+      "EndFuelLevel": {
+        "BaseUnit": "Percentage",
+        "RiskSeverity": "None",
+        "Timestamp": "2017-03-19T05:22:43.228Z",
+        "BaseValue": 70,
+        "Unit": "Percentage",
+        "Value": 70
+      },
+      "Id": "9078e34c-177f-43f5-815d-ab7203af1029",
+      "CreatedOn": "2017-03-19T05:21:35.296Z",
+      "LastModified": "2017-03-19T05:22:43.228Z",
+      "Deleted": false,
+      "Metadata": {
+        "UserPermissions": [
+          "owner"
+        ],
+        "RequestPermissions": [
+          "admin"
+        ]
+      },
+      "Links": {
+        "Self": "/v2/trips/9078e34c-177f-43f5-815d-ab7203af1029",
+        "Vehicle": "/v2/vehicles/70eb28a1-43e2-4bd4-9b19-c8efe9e05712",
+        "Mojio": "/v2/mojios/11eba20b-9390-4dc1-9809-13a7e610b919",
+        "Permissions": "/v2/trips/9078e34c-177f-43f5-815d-ab7203af1029/permissions",
+        "Permission": "/v2/trips/9078e34c-177f-43f5-815d-ab7203af1029/permission",
+        "States": "/v2/trips/9078e34c-177f-43f5-815d-ab7203af1029/history/states",
+        "Locations": "/v2/trips/9078e34c-177f-43f5-815d-ab7203af1029/history/locations"
+      }
+    },
+    {
+      "VehicleId": "70eb28a1-43e2-4bd4-9b19-c8efe9e05712",
+      "Tags": [],
+      "MojioId": "11eba20b-9390-4dc1-9809-13a7e610b919",
+      "Completed": false,
+      "Duration": "00:00:00",
+      "StartTimestamp": "2017-03-19T05:49:22.558Z",
+      "EndTimestamp": "2017-03-19T05:49:22.558Z",
+      "StartOdometer": {
+        "RolloverValue": 0,
+        "BaseUnit": "Meters",
+        "Timestamp": "2017-03-19T05:49:22.558Z",
+        "BaseValue": 12,
+        "Unit": "Meters",
+        "Value": 12
+      },
+      "EndOdometer": {
+        "RolloverValue": 0,
+        "BaseUnit": "Meters",
+        "Timestamp": "2017-03-19T05:49:22.558Z",
+        "BaseValue": 12,
+        "Unit": "Meters",
+        "Value": 12
+      },
+      "StartLocation": {
+        "Lat": 49.28284,
+        "Lng": -123.1166,
+        "Timestamp": "2017-03-19T05:49:22.558Z",
+        "Address": {
+          "City": "Vancouver",
+          "Country": "Canada",
+          "CountryCode": "CA",
+          "County": "Greater Vancouver",
+          "FormattedAddress": "3050 E Mall, Vancouver, BC V6T 1W5, Canada",
+          "HouseNumber": "3050",
+          "PostCode": "V6T 1W5",
+          "Road": "East Mall",
+          "State": "British Columbia"
+        },
+        "Status": "Locked",
+        "Dilution": 0,
+        "Altitude": 0,
+        "GeoHash": "c2b2q7tjr71r"
+      },
+      "EndLocation": {
+        "Lat": 49.28284,
+        "Lng": -123.1166,
+        "Timestamp": "2017-03-19T05:49:22.558Z",
+        "Status": "Locked",
+        "Dilution": 0,
+        "Altitude": 0,
+        "GeoHash": "c2b2q7tjr71r"
+      },
+      "Distance": {
+        "BaseUnit": "Meters",
+        "Timestamp": "2017-03-19T05:49:22.558Z",
+        "BaseValue": 0,
+        "Unit": "Meters",
+        "Value": 0
+      },
+      "MaxSpeed": {
+        "BaseUnit": "KilometersPerHour",
+        "Timestamp": "2017-03-19T05:49:22.558Z",
+        "BaseValue": 65,
+        "Unit": "KilometersPerHour",
+        "Value": 65
+      },
+      "MaxRPM": {
+        "BaseUnit": "RevolutionsPerMinute",
+        "Timestamp": "2017-03-19T05:49:22.558Z",
+        "BaseValue": 772,
+        "Unit": "RevolutionsPerMinute",
+        "Value": 772
+      },
+      "MaxAcceleration": {
+        "BaseUnit": "KilometersPerHourPerSecond",
+        "Timestamp": "2017-03-19T05:49:22.558Z",
+        "BaseValue": 0,
+        "Unit": "KilometersPerHourPerSecond",
+        "Value": 0
+      },
+      "MaxDeceleration": {
+        "BaseUnit": "KilometersPerHourPerSecond",
+        "Timestamp": "2017-03-19T05:49:22.558Z",
+        "BaseValue": 0,
+        "Unit": "KilometersPerHourPerSecond",
+        "Value": 0
+      },
+      "FuelEfficiency": {
+        "BaseUnit": "KilometerPerLiter",
+        "Timestamp": "2017-03-19T05:49:22.558Z",
+        "BaseValue": 15,
+        "Unit": "KilometerPerLiter",
+        "Value": 15
+      },
+      "StartFuelLevel": {
+        "BaseUnit": "Percentage",
+        "RiskSeverity": "None",
+        "Timestamp": "2017-03-19T05:49:22.558Z",
+        "BaseValue": 80,
+        "Unit": "Percentage",
+        "Value": 80
+      },
+      "EndFuelLevel": {
+        "BaseUnit": "Percentage",
+        "RiskSeverity": "None",
+        "Timestamp": "2017-03-19T05:49:22.558Z",
+        "BaseValue": 80,
+        "Unit": "Percentage",
+        "Value": 80
+      },
+      "Id": "e5a0a428-5bba-4566-a467-4425fc058201",
+      "CreatedOn": "2017-03-19T05:49:22.150Z",
+      "LastModified": "2017-03-19T05:49:22.558Z",
+      "Deleted": false,
+      "Metadata": {
+        "UserPermissions": [
+          "owner"
+        ],
+        "RequestPermissions": [
+          "admin"
+        ]
+      },
+      "Links": {
+        "Self": "/v2/trips/e5a0a428-5bba-4566-a467-4425fc058201",
+        "Vehicle": "/v2/vehicles/70eb28a1-43e2-4bd4-9b19-c8efe9e05712",
+        "Mojio": "/v2/mojios/11eba20b-9390-4dc1-9809-13a7e610b919",
+        "Permissions": "/v2/trips/e5a0a428-5bba-4566-a467-4425fc058201/permissions",
+        "Permission": "/v2/trips/e5a0a428-5bba-4566-a467-4425fc058201/permission",
+        "States": "/v2/trips/e5a0a428-5bba-4566-a467-4425fc058201/history/states",
+        "Locations": "/v2/trips/e5a0a428-5bba-4566-a467-4425fc058201/history/locations"
+      }
+    }
+  ],
+  "Results": 3,
+  "Links": {
+    "Self": "https://api.moj.io/v2/trips/",
+    "Next": "https://api.moj.io/v2/trips/?skip=3",
+    "First": "https://api.moj.io/v2/trips/?skip=0"
+  }
+}

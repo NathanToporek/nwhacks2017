@@ -1,5 +1,8 @@
 <html>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <body>
+        <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>
     <script src="javascripts/MojioClientLite.js"></script>
     <script>
        var config = {
@@ -12,13 +15,58 @@
         }else{
             mojio_client.authorize();
         }
+    </script>
+    <script>
+        var vue = new Vue({
+        el: '#data-trips',
+        data:{
+            trips:[],
+        },
 
-        mojio_client.get().trips().then(function(result){
+        mounted: function()
+        {
+            console.log('here');
+            this.fetchTrips();
+        },
+
+        methods: {
+            fetchTrips: function()
+            {
+                console.log('here');
+            var self = this;
+            $.getJSON("data.json", function(json)
+                {
+                    self.trips = json.Data;
+                });
+            },
+        },
+        });
+       /*
+       mojio_client.getPath('/v2/trips').then(function(result){
             console.log(result);
         });
+        */
     </script>
 
     <h1>App</h1>
+    <div id="data-trips">
+        <table>
+            <thead>
+                <th>Lat</th>
+                <th>Lng</th>
+            </thead>
+            <tbody>
+                <tr v-for="trip in trips">
+                    <td>
+                        {{trip.StartLocation.Lat}}
+                    </td>
+                    <td>
+                        {{trip.StartLocation.Lng}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     </body>
 </html>
