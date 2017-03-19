@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Ride Sharing App</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <style>
+        #google-map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
+</head>
+<body>
+
+
+ <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>
+    <script src="javascripts/MojioClientLite.js"></script>
+    <script>
+       var config = {
+        application: '9d917e4c-7713-4993-b1d3-78c3b9188a5e' // your application ID
+        };
+        mojio_client = new MojioClientLite(config);
+
+        if(mojio_client.token())
+        {
+        }else{
+            mojio_client.authorize();
+        }
+    </script>
+    <script>
+        var vue = new Vue({
+        el: '#data-trips',
+        data:{
+            trips:[],
+        },
+
+        mounted: function()
+        {
+            this.fetchTrips();
+        },
+
+        methods: {
+            fetchTrips: function()
+            {
+            var self = this;
+            $.getJSON("data.json", function(json)
+                {
+                    self.trips = json.Data;
+                    var startLocation = {lat: self.trips[0].StartLocation.Lat, lng: self.trips[0].StartLocation.Lng};
+                    var endLocation = {lat: self.trips[0].EndLocation.Lat, lng: self.trips[0].EndLocation.Lng};
+                    var map = new google.maps.Map(document.getElementById('google-map'), {
+                        zoom: 12,
+                        center: startLocation
+                    });
+                    var markerStart = new google.maps.Marker({
+                        position: startLocation,
+                        map: map
+                    });
+                    var markerEnd = new google.maps.Marker({
+                        position: endLocation,
+                        map: map
+                    });
+                });
+            },
+        },
+        });
+       /*
+       mojio_client.getPath('/v2/trips').then(function(result){
+            console.log(result);
+        });
+        */
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe2hRDV95UFwIxNT_5IISZHGRU9p0nP7I"> </script>
+
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Car Sharing</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+         <li><a href="/suggested.html">Suggested Rides</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="/">Home</a></li>
+         <li><a href="/suggested.html">Suggested Rides</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container-fluid">
+        <div>
+        <div id="google-map"></div>
+            <table>
+                <thead>
+                    <th>Lat</th>
+                    <th>Lng</th>
+                </thead>
+                <tbody id="data-trips">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    </div>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Car Sharing</h5>
+          <p class="grey-text text-lighten-4"></p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright"></div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../../bin/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
