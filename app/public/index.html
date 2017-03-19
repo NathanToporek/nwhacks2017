@@ -42,10 +42,19 @@
             $.getJSON("data.json", function(json)
                 {
                     self.trips = json.Data;
-                    var uluru = {lat: self.trips[0].StartLocation.Lat, lng: self.trips[0].StartLocation.Lng};
+                    var startLocation = {lat: self.trips[0].StartLocation.Lat, lng: self.trips[0].StartLocation.Lng};
+                    var endLocation = {lat: self.trips[0].EndLocation.Lat, lng: self.trips[0].EndLocation.Lng};
                     var map = new google.maps.Map(document.getElementById('google-map'), {
-                        zoom: 4,
-                        center: uluru
+                        zoom: 12,
+                        center: startLocation
+                    });
+                    var markerStart = new google.maps.Marker({
+                        position: startLocation,
+                        map: map
+                    });
+                    var markerEnd = new google.maps.Marker({
+                        position: endLocation,
+                        map: map
                     });
                 });
             },
@@ -60,7 +69,8 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe2hRDV95UFwIxNT_5IISZHGRU9p0nP7I">
     </script>
-    <h1>App</h1>
+
+    <h2>Ride Sharing</h2>
     <div id="google-map"></div>
     <div id="data-trips">
         <table>
