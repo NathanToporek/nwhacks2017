@@ -3,8 +3,6 @@
 import sys, json, transactions
 
 def main():
-	for string in sys.argv:
-		print string
 	res = None
 	s = 'suggest'
 	l = 'list'

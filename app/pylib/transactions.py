@@ -25,7 +25,6 @@ def create():
 
 def byUser(username):
         q = 'SELECT * FROM dataPoints WHERE username = \'{}\''.format(username)
-        print 'EXECUTING QUERY: {}'.format(q)
         crsr.execute(q)
         return crsr.fetchall()
 
