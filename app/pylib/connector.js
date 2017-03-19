@@ -3,7 +3,7 @@
 var pShell = require('python-shell');
 
 module.exports = function() { 
-    this.connect = function(option, name, tvar, dist) {
+    connector.prototype.connect = function(option, name, tvar, dist) {
 			var options = {
 			mode:'text',
 			args:[option, name, tvar, dist]

@@ -24,12 +24,14 @@
     <script src="javascripts/MojioClientLite.js"></script>
     <script>
        var config = {
-        application: '9d917e4c-7713-4993-b1d3-78c3b9188a5e' // your application ID
+        application: '9d917e4c-7713-4993-b1d3-78c3b9188a5e', // your application ID
+        scope:'full'
         };
         mojio_client = new MojioClientLite(config);
 
         if(mojio_client.token())
         {
+            alert('logged in');
         }else{
             mojio_client.authorize();
         }
@@ -73,7 +75,7 @@
         });
        
        mojio_client.getPath('/v2/me').then(function(result){
-            //console.log(result);
+            console.log(result);
         });
         var email = "b0911b@gmail.com";
 
