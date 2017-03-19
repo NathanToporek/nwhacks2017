@@ -1,0 +1,27 @@
+{
+  "name": "nwhacks2017",
+  "version": "0.0.1",
+  "description": "NW Hacks Car Sharing App",
+  "main": "app.js",
+  "dependencies": {
+    "options": "~0.0.6",
+    "mojio-client-lite": "~1.0.0",
+    "express": "~4.15.2",
+    "xmlhttprequest": "~1.8.0",
+    "ws": "~1.1.4",
+    "ultron": "~1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NathanToporek/nwhacks2017.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/NathanToporek/nwhacks2017/issues"
+  }
+}
