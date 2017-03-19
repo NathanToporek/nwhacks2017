@@ -1,4 +1,11 @@
 <html>
+    <style>
+        #google-map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <body>
         <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
@@ -25,18 +32,21 @@
 
         mounted: function()
         {
-            console.log('here');
             this.fetchTrips();
         },
 
         methods: {
             fetchTrips: function()
             {
-                console.log('here');
             var self = this;
             $.getJSON("data.json", function(json)
                 {
                     self.trips = json.Data;
+                    var uluru = {lat: self.trips[0].StartLocation.Lat, lng: self.trips[0].StartLocation.Lng};
+                    var map = new google.maps.Map(document.getElementById('google-map'), {
+                        zoom: 4,
+                        center: uluru
+                    });
                 });
             },
         },
@@ -47,8 +57,11 @@
         });
         */
     </script>
-
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe2hRDV95UFwIxNT_5IISZHGRU9p0nP7I">
+    </script>
     <h1>App</h1>
+    <div id="google-map"></div>
     <div id="data-trips">
         <table>
             <thead>
