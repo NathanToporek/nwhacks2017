@@ -14,4 +14,4 @@ function connect(option, name, tvar, dist) {
 		return res;
 	});
 }
-connect("suggest", "Nathan", 30, 500);
+//connect("suggest", "Nathan", 30, 500);
