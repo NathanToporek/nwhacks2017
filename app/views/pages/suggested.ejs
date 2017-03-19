@@ -35,49 +35,6 @@
             mojio_client.authorize();
         }
     </script>
-    <script>
-        var vue = new Vue({
-        el: '#data-trips',
-        data:{
-            trips:[],
-        },
-
-        mounted: function()
-        {
-            this.fetchTrips();
-        },
-
-        methods: {
-            fetchTrips: function()
-            {
-            var self = this;
-            $.getJSON("data.json", function(json)
-                {
-                    self.trips = json.Data;
-                    var startLocation = {lat: self.trips[0].StartLocation.Lat, lng: self.trips[0].StartLocation.Lng};
-                    var endLocation = {lat: self.trips[0].EndLocation.Lat, lng: self.trips[0].EndLocation.Lng};
-                    var map = new google.maps.Map(document.getElementById('google-map'), {
-                        zoom: 12,
-                        center: startLocation
-                    });
-                    var markerStart = new google.maps.Marker({
-                        position: startLocation,
-                        map: map
-                    });
-                    var markerEnd = new google.maps.Marker({
-                        position: endLocation,
-                        map: map
-                    });
-                });
-            },
-        },
-        });
-       /*
-       mojio_client.getPath('/v2/trips').then(function(result){
-            console.log(result);
-        });
-        */
-    </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe2hRDV95UFwIxNT_5IISZHGRU9p0nP7I"> </script>
 
   <nav class="light-blue lighten-1" role="navigation">
