@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 
+var connection = require('./pylib/connector.js');
+
 var app = express();
 
 // view engine setup
@@ -27,6 +29,8 @@ app.get('/', function(req, res) {
 });
 
 app.get('/suggested', function(req, res) {
+    var result = connection.connect("suggest", "b0911b@gmail.com", 30, 500);
+    console.log(result);
     res.render('pages/suggested');
 });
 
