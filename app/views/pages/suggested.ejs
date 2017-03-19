@@ -19,7 +19,9 @@
 </head>
 <body>
 
-
+ <script>
+ console.log(<%- data %>)
+ </script>
  <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.4/vue.min.js"></script>
     <script src="javascripts/MojioClientLite.js"></script>
@@ -64,16 +66,31 @@
           <h5 class="white-text">Car Sharing</h5>
           <p class="grey-text text-lighten-4"></p>
         </div>
+        <table>
+        <thead>
+          <th>Start Lon</th>
+          <th>Start Lat</th>
+          <th>End Lon</th>
+          <th>End Lat</th>
+          <th>Start time</th>
+          <th>End time</th>
+        </thead>
+        <tbody>
+        <% items.forEach(function(item) { %>
+          <tr>
+          <td>item.slon</td>
+          <td>item.sla</td>
+          <td>item.elon</td>
+          <td>item.eat</td>
+          <td>item.stime</td>
+          <td>item.etime</td>
+          </tr>
+        <% }); %>
+        </tbody>
+        </table>
       </div>
     </div>
     <div class="footer-copyright"></div>
   </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="../../bin/materialize.js"></script>
-  <script src="js/init.js"></script>
-
   </body>
 </html>

@@ -31,7 +31,7 @@ app.get('/', function(req, res) {
 app.get('/suggested', function(req, res) {
     var result = connector.connect("suggest", "b0911b@gmail.com", 30, 500);
     console.log(result);
-    res.render('pages/suggested');
+    res.render('pages/suggested', { data : result });
 });
 
 // catch 404 and forward to error handler
