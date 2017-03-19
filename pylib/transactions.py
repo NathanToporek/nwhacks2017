@@ -1,7 +1,7 @@
 #!/usr/bin/python
+import json
 from math import radians, cos, sin, asin, sqrt, fabs
 import psycopg2
-import json
 #creat a connection object
 conn = psycopg2.connect(database='RIDESHARE', user='nate', password='password', host='localhost', port=26257)
 
@@ -52,7 +52,7 @@ def suggest(username, timeVar, dist):
 
 			if(__isInTimeRange(timeVar, mst, ost) and __isInTimeRange(timeVar, met, oet) 
 		       and __inRange(dist, msla, mslo, osla, oslo) and __inRange(dist, mela, melo, oela, oelo)):
-				suggested.append(other)
+				suggested.append(json.dumps({'username':other[0], 'stime':other[1], 'sla':other[2], 'slo':other[3], 'etime':other[4], 'ela':other[5], 'elo':other[6]}))
 	
 	return suggested			
 			
