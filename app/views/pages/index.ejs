@@ -31,7 +31,7 @@
 
         if(mojio_client.token())
         {
-            
+
         }else{
             mojio_client.authorize();
         }
@@ -51,10 +51,9 @@
         methods: {
             fetchTrips: function()
             {
-            var self = this;
-            $.getJSON("data.json", function(json)
-                {
-                    self.trips = json.Data;
+                var self = this;
+                mojio_client.getPath('/v2/trips').then(function(result){
+                    self.trips = result.Data;
                     var startLocation = {lat: self.trips[0].StartLocation.Lat, lng: self.trips[0].StartLocation.Lng};
                     var endLocation = {lat: self.trips[0].EndLocation.Lat, lng: self.trips[0].EndLocation.Lng};
                     var map = new google.maps.Map(document.getElementById('google-map'), {
@@ -72,8 +71,7 @@
                 });
             },
         },
-        });
-       
+    });
        mojio_client.getPath('/v2/me').then(function(result){
             console.log(result);
         });
