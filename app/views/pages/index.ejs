@@ -54,7 +54,7 @@
                 var self = this;
                 mojio_client.getPath('/v2/trips').then(function(result){
                     self.trips = result.Data;
-                    var length = result.Data.length - 2;
+                    var length = result.Data.length - 1;
                     var startLocation = {lat: self.trips[length].StartLocation.Lat, lng: self.trips[length].StartLocation.Lng};
                     var endLocation = {lat: self.trips[length].EndLocation.Lat, lng: self.trips[length].EndLocation.Lng};
                     var map = new google.maps.Map(document.getElementById('google-map'), {
