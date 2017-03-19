@@ -89,7 +89,6 @@ def __allExceptUser(username):
 	
 	# Grab all entries in our database execept for the user's
   	q = 'SELECT * FROM dataPoints WHERE username != \'{}\';'.format(username)
-	print "EXECUTING QUERY: {}".format(q)
 	crsr.execute(q)
 	return crsr.fetchall()
 
