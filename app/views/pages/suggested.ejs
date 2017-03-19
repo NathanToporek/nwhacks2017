@@ -76,14 +76,14 @@
           <th>End time</th>
         </thead>
         <tbody>
-        <% items.forEach(function(item) { %>
+        <% data.forEach(function(trip) { %>
           <tr>
-          <td>item.slon</td>
-          <td>item.sla</td>
-          <td>item.elon</td>
-          <td>item.eat</td>
-          <td>item.stime</td>
-          <td>item.etime</td>
+          <td>trip.slon</td>
+          <td>trip.sla</td>
+          <td>trip.elon</td>
+          <td>trip.eat</td>
+          <td>trip.stime</td>
+          <td>trip.etime</td>
           </tr>
         <% }); %>
         </tbody>
