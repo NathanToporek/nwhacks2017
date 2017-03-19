@@ -69,26 +69,24 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBe2hRDV95UFwIxNT_5IISZHGRU9p0nP7I">
     </script>
-
-    <h2>Ride Sharing</h2>
-    <div id="google-map"></div>
-    <div id="data-trips">
-        <table>
-            <thead>
-                <th>Lat</th>
-                <th>Lng</th>
-            </thead>
-            <tbody>
-                <tr v-for="trip in trips">
-                    <td>
-                        {{trip.StartLocation.Lat}}
-                    </td>
-                    <td>
-                        {{trip.StartLocation.Lng}}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div>
+        <h2>Ride Sharing</h2>
+        <div id="google-map"></div>
+        <div id="data-trips">
+            <table>
+                <thead>
+                    <th>Lat</th>
+                    <th>Lng</th>
+                </thead>
+                <tbody>
+                    <tr v-for="trip in trips">
+                        <td>
+                            {{trip.StartLocation.Lat}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 
     </body>
